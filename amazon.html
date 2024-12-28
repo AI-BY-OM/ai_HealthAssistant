@@ -1,0 +1,266 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Images in Each Div</title>
+    <style>
+        body{
+            background-image: radial-gradient(circle at center center, rgb(233, 240, 92),rgb(236, 129, 32));
+        }
+        
+
+        
+        .header {
+            margin-top: 20px;
+            background: linear-gradient( #1f1d1d, #e6563c); 
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+       
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+       
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+       
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fdd835; 
+        }
+
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: none;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            width: 200px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 8px 12px;
+            background-color: #ff4500;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #e63e00;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        
+        .amazon {
+            display: flex; 
+            justify-content: space-evenly; 
+            align-items: flex-start; 
+            flex-wrap: nowrap; 
+            margin: 20px auto;
+            width: 100%;
+            max-width: 1300px; 
+            gap: 20px; 
+        }
+
+        
+        .box {
+            margin-top: 70px;
+            background-color: rgb(223, 174, 174);
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 200px; 
+            height: 250px; 
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+       
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Images */
+        .box img {
+            width: 80px; 
+            height: 70px; 
+            margin: 5px auto; 
+        }
+
+        /* Text */
+        .box span {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        p{
+            color: black;
+            font-size: 20px;
+        }
+        .rahul{
+            height: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+        <!-- Header Section -->
+    <header class="header">
+        <div class="navbar">
+            
+            <div class="logo">Shop here</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button>Search</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Container -->
+    <div class="amazon">
+        <!-- First Div -->
+        <div class="box">
+            <div class="image-container">
+                <p>discount upto 20%</p>
+                <div>
+                    <img src="child1.png" alt="Shoes for men"><span>For Men</span>
+                </div>
+                <div>
+                    <img src="child2.png" alt="Shoes for children"><span>For Children</span>
+                </div>
+                <div>
+                    <img src="child3.png" alt="Shoes for ladies"><span>For child</span>
+                </div>
+                <div>
+                    <img src="child4.png" alt="Shoes for women"><span>For child</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Div -->
+        <div class="box">
+            <div class="image-container">
+                <p>discount upto 10%</p>
+                <div>
+                    <img src="iphone.png" alt="Shoes for men"><span>iphone 11</span>
+                </div>
+                <div>
+                    <img src="iphone2.png" alt="Shoes for children"><span>iphone 12</span>
+                </div>
+                <div>
+                    <img src="iphone1.png" alt="Shoes for ladies"><span>iphone 13</span>
+                </div>
+                <div>
+                    <img src="iphone4.png" alt="Shoes for women"><span>iphone 14</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Div -->
+        <div class="box">
+            <div class="image-container">
+                <p>discount upto 20%</p>
+                <div>
+                    <img src="shoes 3.png" alt="Shoes for men"><span>For Men</span>
+                </div>
+                <div>
+                    <img src="shoes 4.png" alt="Shoes for children"><span>For Children</span>
+                </div>
+                <div>
+                    <img src="shoes 3.png" alt="Shoes for ladies"><span>for man</span>
+                </div>
+                <div>
+                    <img src="shoes 4.png" alt="Shoes for women"><span>for man</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fourth Div -->
+        <div class="box">
+            <div class="image-container">
+                <p>discount upto 20%</p>
+                <div>
+                    <img src="woman1.png" alt="Shoes for men"><span>For woman</span>
+                </div>
+                <div>
+                    <img src="woman2.png" alt="Shoes for children"><span>For woman</span>
+                </div>
+                <div>
+                    <img src="woman3.png" alt="Shoes for ladies"><span>For Ladies</span>
+                </div>
+                <div>
+                    <img src="woman1.png" alt="Shoes for women"><span>For Women</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rahul"></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intra non scorll</title>
+    <style type="text/css">
+
+
+        section{
+            display: flex;
+            flex-direction: row;
+            margin-left: 50px;
+            margin-top: 150px;
+            box-shadow: 2px 2px 2px black;
+
+        }
+        .card{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin-right: 60px;
+            text-align: center;
+            padding-inline: 30px;           
+        }
+        
+        .card:target{
+            background-color: black;
+            color: white;
+            
+        }
+
+
+        .link{
+            display: flex;
+            flex-direction: row;
+            margin-left: 100px;
+            justify-content: space-evenly ;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <span><a href="#html">HTML</a></span>
+        <span><a href="#css">CSS</a></span>
+        <span><a href="#js">JS</a></span>
+    </nav>
+    
+    <section>
+        <div class="card" id="html">
+            <h2>HTML</h2 >
+            <span>ist's a markup language </span>
+        </div>
+
+        <div class="card" id="css">
+            <h2>css</h2>
+            <span>ist's a styling language </span>
+        </div>
+
+        <div class="card" id="js">
+            <h2>js</h2>
+            <span>ist's a scripting language </span>
+        </div>
+    </section>
+    
+</body>
+</html>

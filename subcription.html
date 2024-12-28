@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            background-image: linear-gradient(rgba(200, 187, 194, 0.818), rgba(251, 249, 251, 0.889)), url('ground 2.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #000000;
+            backdrop-filter: blur(1px); 
+            width: 600px; 
+            margin: 30px auto 0 auto; /* Move header 30px down */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: black;
+        }
+
+        /* Subscription Section */
+        .subscription-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .subscription-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .plan {
+            border: 5px solid #000000;
+            background-color: transparent;
+            border-radius: 25px;
+            padding: 20px;
+            width: 45%;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            backdrop-filter: blur(7px); /* Add backdrop effect */
+        }
+
+        .plan:hover {
+            transform: scale(1.05);
+            background-color: black;
+            border-color: 5px rgb(255, 255, 255);
+        }
+
+        .plan h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .plan p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .plan ul {
+            list-style: disc;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .plan ul li {
+            width: 100%;
+            margin-left: 40px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .cta-button {
+            height: auto; 
+            width: auto; 
+            background-color: #ffffff;
+            color: #0066cc;
+            padding: 10px 20px; 
+            font-size: 1.2rem;
+            border-radius: 25px; 
+            transition: background-color 0.3s ease;
+            text-decoration: none; 
+            display: inline-block; 
+            font-weight: bold; 
+        }
+
+        .cta-button:hover {
+            background-color: #ff00ee;
+            color: #ffffff;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #fff;
+            border: 2px solid #fff; 
+            border-radius: 25px; 
+            width: fit-content; 
+            margin: 20px auto; 
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Subscription Plans</h1>
+    </header>
+
+    <!-- Subscription Section -->
+    <section class="subscription-section">
+        <div class="subscription-container">
+            <div class="plan">
+                <h2>Monthly Plan</h2>
+                <p>$29.99/month</p>
+                <ul>
+                    <li>24/7 AI Health Assistance</li>
+                    <li>Personalized Health Insights</li>
+                    <li>Daily Health Tips</li>
+                    <li>Access to Health Reports</li>
+                    <li>Priority Support</li>
+                </ul>
+                <a href="payment.html" class="cta-button">Buy Now</a>
+                <a href="payment.html" class="cta-button">Buy With Subscription</a>
+            </div>
+            <div class="plan">
+                <h2>Yearly Plan</h2>
+                <p>$299.99/year</p>
+                <ul>
+                    <li>24/7 AI Health Assistance</li>
+                    <li>Personalized Health Insights</li>
+                    <li>Daily Health Tips</li>
+                    <li>Access to Health Reports</li>
+                    <li>Priority Support</li>
+                    <li>2 Months Free</li>
+                </ul>
+                <a href="payment.html" class="cta-button">Buy Now</a>
+                <a href="payment.html" class="cta-button">Buy With Subscription</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AI Health Assistance. All rights reserved.</p>
+        <p>12th Floor, Tower B Brigade Signature Towers, Old Madras Rd, Sannatammanahalli, Bengaluru, Karnataka 560049, India</p>
+    </footer>
+
+</body>
+</html>

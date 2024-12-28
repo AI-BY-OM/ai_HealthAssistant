@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+    .alarm-list {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .alarm-item {
+      background: #e9ecef;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Set Alarm</h1>
+    <input type="time" id="alarmTime" required>
+    <textarea id="alarmMessage" placeholder="Enter your message" required></textarea>
+    <button onclick="setAlarm()">Set Alarm</button>
+    <p id="status"></p>
+    <div class="alarm-list" id="alarmList"></div>
+  </div>
+
+  <script>
+    function setAlarm() {
+      const alarmTime = document.getElementById('alarmTime').value;
+      const alarmMessage = document.getElementById('alarmMessage').value;
+      const status = document.getElementById('status');
+      const alarmList = document.getElementById('alarmList');
+
+      if (!alarmTime || !alarmMessage) {
+        status.textContent = 'Please set both time and message.';
+        return;
+      }
+
+      const alarmDate = new Date();
+      const [hours, minutes] = alarmTime.split(':');
+      alarmDate.setHours(hours, minutes, 0, 0);
+
+      const now = new Date();
+      const timeToAlarm = alarmDate.getTime() - now.getTime();
+
+      if (timeToAlarm < 0) {
+        status.textContent = 'The specified time has already passed today.';
+        return;
+      }
+
+      status.textContent = `Alarm set for ${alarmTime}.`;
+
+      const alarmItem = document.createElement('div');
+      alarmItem.className = 'alarm-item';
+      alarmItem.textContent = `Alarm set for ${alarmTime} - ${alarmMessage}`;
+      alarmList.appendChild(alarmItem);
+
+      setTimeout(() => {
+        alert(alarmMessage);
+        alarmList.removeChild(alarmItem);
+      }, timeToAlarm);
+    }
+  </script>
+</body>
+</html>
